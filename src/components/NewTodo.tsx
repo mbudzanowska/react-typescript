@@ -1,4 +1,5 @@
 import { useRef } from "react";
+import "./NewTodo.css"
 
 interface IProps {
   onAddTodo: (text: string) => void;
@@ -15,7 +16,7 @@ const NewTodo: React.FC<IProps> = ({ onAddTodo }) => {
 
   return (
     <form>
-      <div>
+      <div className="form-control">
         <label htmlFor="todo-text">Todo Text</label>
         <input ref={textInputRef} type="text" id="todo-text" />
       </div>
